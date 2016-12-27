@@ -1,25 +1,20 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
+    <toolbar></toolbar>
+    <notes-list></notes-list>
+    <editor></editor>
   </div>
 </template>
-
 <script>
+import Toolbar from './Toolbar.vue'
+import NotesList from './NotesList.vue'
+import Editor from './Editor.vue'
+
 export default {
-  data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello Vue!'
-    }
+  components: {
+    Toolbar,
+    NotesList,
+    Editor
   }
 }
 </script>
-
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
-</style>
